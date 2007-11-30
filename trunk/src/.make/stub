@@ -1,0 +1,4 @@
+$(OBJDIR)/objects/usbmonitor/usbmonitor.$(OBJ_SUFFIX):usbmonitor.cc
+	echo -n "(CXX) `basename '$@'` "; $(CXX) $(CPPFLAGS) $(CXXFLAGS) $(usbmonitor_CPPFLAGS) $(usbmonitor_CXXFLAGS) -c $(OBJOUT)$@ $(DBGOUT) $<
+$(OBJDIR)/objects/usbmonitor/usbmonitor.d:usbmonitor.cc
+	echo "(DEP) `basename '$@'`"; $(TOPSRC)/tools/dep.rb usbmonitor $< $@ $(CPPFLAGS) $(CXXFLAGS) $(usbmonitor_CPPFLAGS) $(usbmonitor_CXXFLAGS) > $@

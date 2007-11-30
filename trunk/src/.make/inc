@@ -1,0 +1,19 @@
+TOPSRC=..
+include $(TOPSRC)/config/make.config
+usbmonitor_CPPFLAGS=
+usbmonitor_CFLAGS=
+usbmonitor_CXXFLAGS=
+usbmonitor_LDFLAGS=
+usbmonitor_LIBS=
+usbmonitor_OBJS+=\
+	$(OBJDIR)/objects/usbmonitor/usbmonitor.$(OBJ_SUFFIX) 
+
+usbmonitor_DEPS+=\
+	$(OBJDIR)/objects/usbmonitor/usbmonitor.d 
+
+TARGETS_OBJS += $(usbmonitor_OBJS)
+TARGETS_DEPS += $(usbmonitor_DEPS)
+TARGETS+=$(OBJDIR)/bin/usbmonitor$(BIN_SUFFIX)
+TARGETS_EXTRA+=$(OBJDIR)/bin/usbmonitor.ilk $(OBJDIR)/bin/usbmonitor.pdb
+usbmonitor_DEPS+=
+usbmonitor_DEPS+=

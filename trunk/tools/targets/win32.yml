@@ -1,0 +1,20 @@
+config:
+  CC: 'cl -nologo'
+  CXX: 'cl -nologo'
+  LD: '/c/Program\ Files/Microsoft\ Visual\ Studio\ 8/VC/bin/link.exe -nologo'
+  OS_ARCH: 'win32'
+  OBJ_SUFFIX: 'obj'
+  LIB_SUFFIX: 'dll'
+  LIB_PREFIX: 
+  STATIC_SUFFIX: 'lib'
+  BIN_SUFFIX: '.exe'
+  OBJOUT: '-Fo'
+#  DBGOUT: '-Fd$(OBJDIR)/lib/vc70.pdb'
+
+debug:
+  CPPFLAGS: "/DDEBUG /D_WIN32 /DWIN32 /nologo /W3 /MDd /Zi /Od /GS /Gd"
+  LDFLAGS: "/nologo /INCREMENTAL /DEBUG /ASSEMBLYDEBUG /SUBSYSTEM:CONSOLE"
+
+release:
+  CPPFLAGS: "/Ox /Og /Ot /Oi /GF /D_WIN32 /DWIN32 /nologo /W3 /MD /DNDEBUG"
+  LDFLAGS: "/INCREMENTAL:NO /OPT:REF /nologo /SUBSYSTEM:WINDOWS"

@@ -1,0 +1,11 @@
+CC=cl
+CXX=cl
+LD=link
+CPPFLAGS=-nologo
+CFLAGS=-Wall
+CXXFLAGS=-Wall
+LDFLAGS=-nologo
+EXT=.exe
+
+%exe:%cc
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $< -out:$@
