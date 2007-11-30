@@ -1,0 +1,12 @@
+<% @opts.flags['config'].each{|flag,value| %>
+<%= "#{flag}=#{value}\n" %>
+<% } %>
+<% @user_opts[@opts.mode].each{|flag,value| %>
+<%= "#{flag}=#{value}\n" %>
+<% } %>
+BRAND=<%= @opts.brand %>
+MODE=<%= @opts.mode %>
+OBJDIR=$(TOPSRC)/$(MODE)-$(BRAND)/
+<% @opts.flags[@opts.mode].each{|flag,value| %>
+<%= "#{flag}=#{value}\n" %>
+<% } %>

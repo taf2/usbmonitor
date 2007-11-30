@@ -1,0 +1,4 @@
+$(OBJDIR)/objects/shellexecute/shellexecute.$(OBJ_SUFFIX):shellexecute.c
+	echo -n "(CC) `basename '$@'` "; $(CC) $(CPPFLAGS) $(CFLAGS) $(shellexecute_CPPFLAGS) $(shellexecute_CFLAGS) -c $(OBJOUT)$@ $(DBGOUT) $<
+$(OBJDIR)/objects/shellexecute/shellexecute.d:shellexecute.c
+	echo "(DEP) `basename '$@'`"; $(TOPSRC)/tools/dep.rb shellexecute $< $@ $(CPPFLAGS) $(CFLAGS) $(shellexecute_CPPFLAGS) $(shellexecute_CFLAGS) > $@

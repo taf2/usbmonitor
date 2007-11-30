@@ -1,0 +1,19 @@
+TOPSRC=..
+include $(TOPSRC)/config/make.config
+shellexecute_CPPFLAGS=
+shellexecute_CFLAGS=
+shellexecute_CXXFLAGS=
+shellexecute_LDFLAGS=
+shellexecute_LIBS=shell32.lib
+shellexecute_OBJS+=\
+	$(OBJDIR)/objects/shellexecute/shellexecute.$(OBJ_SUFFIX) 
+
+shellexecute_DEPS+=\
+	$(OBJDIR)/objects/shellexecute/shellexecute.d 
+
+TARGETS_OBJS += $(shellexecute_OBJS)
+TARGETS_DEPS += $(shellexecute_DEPS)
+TARGETS+=shellexecute$(BIN_SUFFIX)
+TARGETS_EXTRA+=shellexecute.ilk shellexecute.pdb
+shellexecute_DEPS+=
+shellexecute_DEPS+=

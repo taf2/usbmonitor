@@ -1,0 +1,30 @@
+config:
+  CC: 'ccache gcc'
+  CXX: 'ccache g++'
+  LD: 'ccache g++'
+  OS_ARCH: 'macosx'
+  OBJ_SUFFIX: 'o'
+  LIB_SUFFIX: 'dylib'
+  LIB_PREFIX: 'lib'
+  STATIC_SUFFIX: 'a'
+  BIN_SUFFIX: 
+  NSPR_CFLAGS: '-I$(MOZ_DIST)/include/nspr -I$(MOZ_DIST)/include/necko'
+  NSPR_LIBS: '-L$(MOZ_DIST)/lib  -lplds4 -lplc4 -lnspr4 -lpthread -ldl'
+  XPCOM_LIBS: '-L$(MOZ_DIST)/lib $(MOZ_DIST)/XUL.framework/XUL -lxpcom -lmozjs'
+  FB_ISQL: '$(FIRE_DIST)/Resources/bin/isql'
+  FIRE_LIBS:  '$(FIRE_DIST)/Firebird'
+  FIRE_CFLAGS:  '-I$(FIRE_DIST)/Headers'
+  OBFUSCATOR:
+  OBJOUT: '-o'
+  DBGOUT:
+
+debug:
+  CPPFLAGS: "-DMACOSX -DDARWIN"
+  CFLAGS: "-Wall -g"
+  CXXFLAGS: "-Wno-ctor-dtor-privacy -Wno-non-virtual-dtor"
+  LDFLAGS:
+release:
+  CPPFLAGS: "-DMACOSX -DDARWIN"
+  CFLAGS: "-Wall -O2"
+  CXXFLAGS: "-Wno-ctor-dtor-privacy -Wno-non-virtual-dtor"
+  LDFLAGS:
