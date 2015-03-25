@@ -1,0 +1,1 @@
+Initially, this will be a place to store my code for getting a USB daemon written to read from a Garmin 305 device.  Using gpsbabel and libusb to detect the device and provide a simple http:// url to expose data from the device.
